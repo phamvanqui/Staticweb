@@ -1,66 +1,571 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="StyleSheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/jquery-3.5.1.min.js"></script>
     <title>Landing Page</title>
-    <link rel="StyleSheet" href="./css/style.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
 </head>
 
 <body>
     <header>
-        <h1>MySite</h1>
-        <h3>Slogan go here...</h3>
+        <h1>BÁO MỚI</h1>
+        <h3>Cập nhật những tin tức mới nhất trong và ngoài nước</h3>
     </header>
     <nav>
-        <ul>
-            <li><a data-section="home">Home</a></li>
-            <li><a data-section="services">Services</a></li>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Products</a>
-                <div class="dropdown-content">
-                    <a data-section="link1">Link 1</a>
-                    <a data-section="link2">Link 2</a>
-                    <a data-section="link3">Link 3</a>
-                </div>
-            </li>
-            <li style="float:right"><a data-section="about">About us</a></li>
+        <ul class="main-menu">
+            <li><a data-section="home">Trang chủ</a></li>
+            <li><a data-section="NEWS">TIN TỨC MỚI</a></li>
+            <li><a data-section="CHEME">CHỦ ĐỀ</a></li>
+            <li><a data-section="HOT">NÓNG</a></li>
+            <li style="float:right"><a data-section="about">GIỚI THIỆU</a></li>
         </ul>
     </nav>
 
     <section id="home" class="hideable-section">
-        <div>Home content</div>
+        <div id="news">
+            <div id="box-head">
+                <h3>TIN TỨC MỚI</h3>
+            </div>
+            <div id="box-body">
+                <ul id="list-news" class="d-flex justify-content-between">
+                    <li>
+                        <a class="post-thumb" href=""><img src="img/demo-1.png" alt=""></a>
+                        <a class="post-title" href="">Made in Việt Nam 11/12/2020 Phễu thoát sàn bằng inox
+                            </a>
+                    </li>
+                    <!-- end-2  -->
+                    <li>
+                        <a class="post-thumb" href=""><img src="img/demo-4.png" alt=""></a>
+                        <a class="post-title" href="">
+                            tin tức</a>
+                    </li>
+                    <!-- end-3  -->
+                    <li>
+                        <a class="post-thumb" href=""><img src="img/demo-3.png" alt=""></a>
+                        <a class="post-title" href="">Dự kiến quy mô sản xuất và giá thành của vaccine COVID-19
+                        </a>
+                    </li>
+                    <!-- end-4  -->
+                </ul>
+            </div>
+        </div>
+        <!-- end-news  -->
+        <div id="society">
+            <div id="box-head">
+                <h3>Tin tức</h3>
+            </div>
+            <div id="box-body">
+                <ul id="list-society" class="d-flex justify-content-between">
+                    <li>
+                        <a class="post-thumb" href=""><img src="img/demo-5.png" alt=""></a>
+                        <a class="post-title" href="">Covid-19</a>
+                    </li>
+                    <!-- end-2  -->
+                    <li>
+                        <a class="post-thumb" href=""><img src="img/demo-6.png" alt=""></a>
+                        <a class="post-title" href=""> Y Tế 
+                        </a>
+                    </li>
+                    <!-- end-3  -->
+                    <li>
+                        <a class="post-thumb" href=""><img src="img/demo-7.png" alt=""></a>
+                        <a class="post-title" href="">Phòng chống bệnh Covid Thay Đổi Như Thế Nào?
+                        </a>
+                    </li>
+                    <!-- end-4  -->
+                </ul>
+            </div>
+        </div>
+        <!-- end-xh  -->
+        <div id="soccer">
+            <div id="box-head">
+                <h3>Kênh số</h3>
+            </div>
+            <div id="box-body">
+                <ul id="list-soccer" class="d-flex justify-content-between">
+                    <li>
+                        <a class="post-thumb" href=""><img src="img/demo-8.png" alt=""></a>
+                        <a class="post-title" href="">Xu hướng</a>
+                    </li>
+                    <!-- end-2  -->
+                    <li>
+                        <a class="post-thumb" href=""><img src="img/demo-11.png" alt=""></a>
+                        <a class="post-title" href="">Yêu thích
+                        </a>
+                    </li>
+                    <!-- end-3  -->
+                    <li>
+                        <a class="post-thumb" href=""><img src="img/demo-10.png" alt=""></a>
+                        <a class="post-title" href="">Đề xuất
+                        </a>
+                    </li>
+                    <!-- end-4  -->
+                </ul>
+            </div>
+        </div>
+        <!-- end-soccer -->
     </section>
-
-    <section id="services" class="hideable-section">
-        <div>Services content</div>
+    <!-- end-section-home -->
+    <section id="watchOnline" class="hideable-section">
+        <div id="container" class="d-flex">
+            <div id="content">
+                <div id="box-news-post">
+                    <div class="box-head">
+                        <h3>Bài viết mới</h3>
+                    </div>
+                    <div class="box-body">
+                        <ul id="list-post">
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-5.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Làm sao để giành nguồn lực cho đúng đối tượng có khả năng thoát nghèo</a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-6.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Sanofi và GSK lùi thời điểm tung vaccinne Covid-19 ra thị trường</a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-7.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Cần chặn dòng tiền vào các kênh không cho phép</a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-8.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Tài chính kinh doanh tối</a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-9.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Airbnb trở thành cổ phiếu du lịch vững chắc </a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-10.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Texas trở thành địa điểm mới thu hút các ông lớn CN</a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="text-align: center;"><button id="btn-more">Xem thêm</button></div>
+            </div>
+            <div id="siderbar">
+                <a href="" class="ads">
+                    <img src="img/anh-11.png" alt="">
+                </a>
+                <div id="box-top-topic">
+                    <div class="box-head"> 
+                        <h3>Chủ Đề Quan Tâm</h3>
+                    </div>
+                    <div class="box-body">
+                        <ul id="list-topic">
+                            <li>
+                                <a href="">Covid-19<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">Trong nước<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">xã hội<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">Ngoài nước<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">Kinh tế<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">Y tế<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">Thể thao văn hoá<span class="num-post">20</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end siderbar  -->
+        </div>
     </section>
-
+    <!-- end-section-fashion  -->
+    <section id="channelNumber" class="hideable-section">
+        <div id="container" class="d-flex">
+            <div id="content">
+                <div id="box-news-post">
+                    <div class="box-head">
+                        <h3>Bài viết mới</h3>
+                    </div>
+                    <div class="box-body">
+                        <ul id="list-post">
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-20.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Miền Bắc sương mù, ô nhiễm không khí</a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-19.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">6 triệu người thoát nghèo sau 5 năm</a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-18.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Gia tăng tình trạng doạ dẫm tài xế ở HCM</a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-12.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Sóng ngầm ở Nou Camp</a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-13.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Các quốc gia triển khai tiêm Vaccine </a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-13.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Những công nghệ đột phá làm nên các vaccine</a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="text-align: center;"><button id="btn-more">Xem thêm</button></div>
+            </div>
+            <div id="siderbar">
+                <a href="" class="ads">
+                    <img src="img/ads-1.png" alt="">
+                </a>
+                <div id="box-top-topic">
+                    <div class="box-head">
+                        <h3>Chủ Đề Quan Tâm</h3>
+                    </div>
+                    <div class="box-body">
+                        <ul id="list-topic">
+                            <li>
+                                <a href="">y tế<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">kinh tế<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">thể thao và văn hoá<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">trong nước<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">quốc tế<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">tạp chí<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">công nghệ<span class="num-post">20</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end siderbar  -->
+        </div>
+    </section>
+    <section  id="moto" class="hideable-section">
+        <div id="container" class="d-flex">
+            <div id="content">
+                <div id="box-news-post">
+                    <div class="box-head">
+                        <h3>Bài viết mới</h3>
+                    </div>
+                    <div class="box-body">
+                        <ul id="list-post">
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-27.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Xe loai A</a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-22.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Xe loai A</a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-23.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Xe loai B</a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-24.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Xe chien</a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-25.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Mau moi </a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-thumb">
+                                    <img src="img/anh-26.png" alt="">
+                                </a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Những công nghệ đột phá </a>
+                                    <div class="post-published">
+                                        <a href="" class="post-author">phamchuong99</a>
+                                        <span class="post-date">11/12/2020</span>
+                                    </div>
+                                    <p class="exceprt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="text-align: center;"><button id="btn-more">Xem thêm</button></div>
+            </div>
+            <div id="siderbar">
+                <a href="" class="ads">
+                    <img src="img/ads.png" alt="">
+                </a>
+                <div id="box-top-topic">
+                    <div class="box-head">
+                        <h3>Chủ Đề Quan Tâm</h3>
+                    </div>
+                    <div class="box-body">
+                        <ul id="list-topic">
+                            <li>
+                                <a href="">y tế<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">kinh tế<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">thể thao và văn hoá<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">trong nước<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">quốc tế<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">tạp chí<span class="num-post">20</span></a>
+                            </li>
+                            <li>
+                                <a href="">công nghệ<span class="num-post">20</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end siderbar  -->
+        </div>
+     </section>
     <section id="about" class="hideable-section">
-        <div>About content</div>
+        <h3>Giới thiệu</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eum saepe eius, veritatis soluta quis impedit! Quas dolore dolor dignissimos aperiam expedita. Voluptatibus impedit non sint ad earum atque perspiciatis unde dolore maxime quam quisquam
+            tempore, suscipit ullam facilis est asperiores libero omnis. Dolorem eaque nemo dolore minima, dicta, vitae magnam eos animi iusto perferendis corporis rem sed quidem rerum pariatur assumenda ab saepe cumque quam adipisci voluptatem dolor?
+            Quam, labore minima? Porro minima vel in, magnam, iste quis est alias, quia aut mollitia repellat velit dolorum eum vero? Molestias aut consequatur eveniet delectus, doloremque cumque enim dolorem facere voluptatum distinctio. In harum maxime
+            inventore accusamus natus nam repellendus, ipsum, quo perferendis sed quam aspernatur. Nemo facere non similique et molestiae. Vero quae odit qui in, architecto eius facilis numquam? Commodi beatae ut distinctio numquam a fugiat ducimus nisi
+            reprehenderit iure? Vel fugiat beatae necessitatibus, magnam ea facilis provident velit tempora, harum aliquid exercitationem, amet similique id illo reiciendis. Fugiat ipsa quasi recusandae earum eaque ab, labore saepe, quod iste aliquid
+            repudiandae animi molestiae minus, commodi doloremque enim quaerat laudantium? Possimus, labore velit placeat, et hic illum ratione iste molestias, alias ea iure earum eligendi facere quidem repudiandae. Quia, sed neque mollitia, corporis
+            culpa veniam aliquam aperiam rem commodi fugit quasi, quam exercitationem optio expedita rerum ex ullam? Natus, ipsam quidem, rem modi enim laudantium odit perspiciatis porro repellat commodi, eius magnam consectetur fugit vitae inventore
+            harum quis adipisci nisi eum perferendis eaque accusamus? Voluptatum aliquam iusto nesciunt, adipisci amet architecto nulla deleniti, maxime unde rerum, ut nihil facere officia minus beatae numquam eius cupiditate quis quam. Placeat autem
+            delectus natus fugiat ipsa animi quisquam, explicabo nostrum architecto beatae hic eius aliquam. Optio molestias officiis neque. Voluptates et modi numquam facilis esse eos eaque cum quis quia? Totam at aliquid ducimus excepturi ullam corporis
+            molestiae quasi, adipisci sit veniam deleniti quisquam! Error, natus. Quam fugiat laudantium aspernatur blanditiis in non reiciendis corrupti asperiores, dolore, aperiam aut et repellendus aliquid quae a natus incidunt iusto illum, corporis
+            explicabo molestiae suscipit exercitationem tempore? Vel dolorum quidem dolore possimus dolores. Aspernatur nemo ut deleniti labore soluta nihil molestiae unde voluptas ex dolorum enim quia maxime, impedit fugiat vitae dolorem eaque, pariatur
+            incidunt quis excepturi. Quia natus eos et, doloremque vel assumenda perferendis asperiores nemo illo? Quis quibusdam labore, porro numquam dicta ducimus, incidunt repellendus, corrupti accusantium voluptatum illum fugit ad. Cumque, ab quo
+            soluta provident tempore numquam deleniti enim corporis placeat officiis rerum praesentium! Aut dolores ducimus magnam debitis tempore laborum, repudiandae assumenda voluptatum error modi! Inventore ex unde quos, culpa dicta nisi officiis
+            aperiam accusamus veritatis nemo eligendi natus saepe laboriosam repellat aut dolorem eum quia exercitationem? Corporis sint facilis quam ipsam, enim id, sunt numquam recusandae voluptatum modi quibusdam deserunt, aut fugit ducimus? Ullam
+            inventore id totam explicabo nostrum cum. Ut, commodi adipisci. Quasi sapiente adipisci tempore commodi obcaecati, ad ex, molestiae sequi a soluta voluptates dolor ea quibusdam dicta inventore ab voluptate reprehenderit sunt mollitia dolore
+            aperiam nostrum neque itaque!</p>
     </section>
-
-    <section id="link1" class="hideable-section">
-        <div>Link1 content</div>
-    </section>
-
-    <section id="link2" class="hideable-section">
-        <div>Link2 content</div>
-    </section>
-
-    <section id="link3" class="hideable-section">
-        <div>Link3 content</div>
-    </section>
-
+    <!-- FOOTER  -->
+    <footer>
+        <p>Copyright © 2020 - 2021 - Tintuc.vn được thành lập và phát triển bởi phamchuong99</p>
+        <p>Thông tin và hình ảnh chỉ mang tính tham khảo. Chúng tôi chưa cung cấp dịch vụ trên website này.</p>
+    </footer>
     <script>
         $(function() {
-            $('nav ul li a').click(function() {
+            $('ul.main-menu li a').click(function() {
                 // Lấy section để hiển thị
                 var $section = $('#' + $(this).data('section'));
-
                 // Nếu đang hiện thì không làm gì.
                 // Nếu không, ẩn tất cả các se cho hiện (kiểu fade in) phần mong muốn.
                 if (!$section.is(':visible')) {
